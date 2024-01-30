@@ -1,0 +1,77 @@
+/* 
+    Created on : 22 ene 2024, 19:53:56
+    Author     : allan
+*/
+
+header{
+    text-align: center;
+}
+
+body{
+    background-color: black; 
+    color: white; 
+    width: 90%; 
+    margin: auto
+}
+
+p{
+    background-color: slateblue;
+    color: yellow;
+}
+
+footer p{
+    text-align: center;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+h1{
+    background-color: black;
+    color: white;
+}
+
+h2{
+    background-color: green;
+    color: yellow;
+}
+
+.aviso{
+    background-color: gray;
+    color: red;
+}
+
+table{
+    width: 70%;
+    margin: auto;
+}
+
+thead tr{
+    background-color: gray;
+    color: red;
+}
+
+.columnAcciones{
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background-color: darkslateblue;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: black;
+    color: white;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
