@@ -3,15 +3,20 @@
     Author     : allan
 */
 
+/*
 header{
     text-align: center;
 }
+*/
 
 body{
     background-color: black; 
     color: white; 
+    
+    /*
     width: 90%; 
     margin: auto
+    */
 }
 
 p{
@@ -67,7 +72,7 @@ tbody tr:nth-child(even){
 }
 
 
-
+/*
 a{
     text-decoration: none;
 }
@@ -75,3 +80,4 @@ a{
 a:hover{
     color: red;
 }
+*/
