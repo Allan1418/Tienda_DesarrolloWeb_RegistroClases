@@ -41,8 +41,8 @@ public class CategoriaController {
     private FirebaseStorageServiceImpl firebaseStorageService;
 
     @PostMapping("/guardar")
-    public String categoriaGuardar(Categoria categoria,
-            @RequestParam("imagenFile") MultipartFile imagenFile) {
+    public String categoriaGuardar(Categoria categoria, @RequestParam("imagenFile") MultipartFile imagenFile) {
+        
         if (!imagenFile.isEmpty()) {
             categoriaService.save(categoria);
             categoria.setRuta_imagen(
@@ -57,6 +57,11 @@ public class CategoriaController {
 
     @GetMapping("/eliminar/{idCategoria}")
     public String categoriaEliminar(Categoria categoria) {
+        
+//        if (!categoria.getProductos().isEmpty()) {
+//            categoriaService.delete(categoria);
+//        }
+        
         categoriaService.delete(categoria);
         return "redirect:/categoria/listado";
     }
