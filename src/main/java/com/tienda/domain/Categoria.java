@@ -5,22 +5,19 @@ import java.io.Serializable;
 import java.util.List;
 import lombok.Data;
 
-
 @Data
 @Entity
-@Table(name = "Categoria")
-public class Categoria implements Serializable{
+@Table(name = "categoria")
+public class Categoria implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
-    private long idCategoria;
-    
-    
+    private Long idCategoria;
     private String descripcion;
-    private String ruta_imagen;
+    private String rutaImagen;
     private boolean activo;
     
     @OneToMany
@@ -28,20 +25,22 @@ public class Categoria implements Serializable{
 //    @OneToMany(mappedBy = "categoria", cascade = CascadeType.PERSIST)
     List<Producto> productos;
 
-    public Categoria(long idCategoria, String descripcion, String ruta_imagen, boolean activo, List<Producto> productos) {
+
+    public Categoria(long idCategoria, String descripcion, String rutaImagen, boolean activo, List<Producto> productos) {
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
-        this.ruta_imagen = ruta_imagen;
+        this.rutaImagen = rutaImagen;
         this.activo = activo;
         this.productos = productos;
     }
-
     
 
     public Categoria() {
     }
-    
-    
-    
+
+    public Categoria(String descripcion, boolean activo) {
+        this.descripcion = descripcion;
+        this.activo = activo;
+    }
 
 }

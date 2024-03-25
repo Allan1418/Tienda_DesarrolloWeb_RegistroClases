@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Producto")
+@Table(name="producto")
 public class Producto implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,17 +24,17 @@ public class Producto implements Serializable {
     private String detalle;
     private double precio;
     private int existencias;
-    private String ruta_imagen;
+    private String rutaImagen;
     private boolean activo;
-
-    public Producto(long idProducto, Categoria categoria, String descripcion, String detalle, double precio, int existencias, String ruta_imagen, boolean activo) {
+    
+    public Producto(long idProducto, Categoria categoria, String descripcion, String detalle, double precio, int existencias, String rutaImagen, boolean activo) {
         this.idProducto = idProducto;
         this.categoria = categoria;
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
         this.existencias = existencias;
-        this.ruta_imagen = ruta_imagen;
+        this.rutaImagen = rutaImagen;
         this.activo = activo;
     }
 
@@ -45,4 +45,9 @@ public class Producto implements Serializable {
     public Producto() {
     }
 
+    public Producto(String descripcion, boolean activo) {
+        this.descripcion = descripcion;
+        this.activo = activo;
+    }
+    
 }
