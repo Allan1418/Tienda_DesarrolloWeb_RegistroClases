@@ -23,10 +23,10 @@ public class Categoria implements Serializable{
     private String ruta_imagen;
     private boolean activo;
     
-    //@OneToMany
-    //@JoinColumn(name = "id_categoria")
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.PERSIST)
-    private List<Producto> productos;
+    @OneToMany
+    @JoinColumn(name = "id_categoria", updatable = false)
+//    @OneToMany(mappedBy = "categoria", cascade = CascadeType.PERSIST)
+    List<Producto> productos;
 
     public Categoria(long idCategoria, String descripcion, String ruta_imagen, boolean activo, List<Producto> productos) {
         this.idCategoria = idCategoria;
