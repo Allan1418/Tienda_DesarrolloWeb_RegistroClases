@@ -21,4 +21,11 @@ public interface ProductoService {
     //lista de productos con precio entre, ordenados por descrp (consulta ampliada)
     public List<Producto> findByPrecioBetweenOrderByDescripcion(
             double precioInf, double precioSup);
+    
+    //Lista de productos utilizando consultas con JPQL    
+    public List<Producto> metodoJPQL(double precioInf, double precioSup);
+    
+    //Lista de productos utilizando consultas con SQL Nativo
+    public List<Producto> metodoNativo(double precioInf, double precioSup);
+
 }
